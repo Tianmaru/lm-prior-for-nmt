@@ -3,8 +3,8 @@
 #####################################################################################
 tools=../../tools
 moses_scripts=$tools/moses_scripts/scripts
-ende_path=./wmt_ende/
-entr_path=./wmt_entr/
+ende_path=./wmt_ende
+entr_path=./wmt_entr
 
 
 #####################################################################################

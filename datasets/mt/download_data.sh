@@ -38,7 +38,9 @@ perl input-from-sgm.perl < test/newstest2018-deen-ref.en.sgm > wmt_ende/test.en
 #------------------------------------------------------------------------------
 mkdir wmt_entr
 
-wget http://opus.nlpl.eu/download.php?f=SETIMES/v2/moses/en-tr.txt.zip -O en-tr.zip
+# wget http://opus.nlpl.eu/download.php?f=SETIMES/v2/moses/en-tr.txt.zip -O en-tr.zip
+wget https://object.pouta.csc.fi/OPUS-SETIMES/v2/moses/en-tr.txt.zip -O en-tr.zip
+
 unzip en-tr.zip -d wmt_entr
 rm en-tr.zip wmt_entr/LICENSE wmt_entr/README wmt_entr/SETIMES.en-tr.ids
 

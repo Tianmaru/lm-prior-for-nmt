@@ -1,0 +1,6 @@
+- changed required torch version from 1.4 to 1.13 to support newer GPUs
+- changed default visdem port in `sys_config.py` from 8096 to 8097, which is the default visdem port
+- removed extra `/` at the end of the filepaths in `datasets/mt/preprocess_parallel.sh`
+- updated readme
+- in `datasets/mt/download_data.sh`, changed english-turkish wmt_entr to `wget https://object.pouta.csc.fi/OPUS-SETIMES/v2/moses/en-tr.txt.zip -O en-tr.zip`, since the path seems to have changed
+- added datasets to `.gitignore`

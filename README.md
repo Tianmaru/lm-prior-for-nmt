@@ -2,6 +2,38 @@ This repository contains source code for the paper
 "Language Model Prior for Low-Resource Neural Machine Translation" 
 ([Paper](https://arxiv.org/abs/2004.14928))
 
+# Quick Start
+
+```shell
+# create new conda environment and install requirements
+conda create -n lmprior python=3.7
+conda activate lmprior
+pip install -r requirements.txt
+````
+
+### Download Data
+
+```shell
+# just download all preprocessed data
+bash download_preprocssed_data.sh
+```
+
+**1. Parallel data**:
+You can download the preprocessed data, the truecase models and the pretrained sentencepiece models from this link:
+http://data.statmt.org/cbaziotis/projects/lm-prior/parallel.
+Put the `wmt_ende` and `wmt_entr` folders in the `datasets/mt/` directory.
+
+To prepare the data on your own:
+ 1. run `datasets/mt/download_data.sh`
+ 2. run `datasets/mt/preprocess_parallel.sh`
+
+
+**2. Monolingual data**:
+You can download the preprocessed data from this link:
+http://data.statmt.org/cbaziotis/projects/lm-prior/mono and then put the files in
+the `datasets/mono/priors/` directory.
+
+# OLD README
 
 # Introduction 
 

@@ -1,3 +1,9 @@
+# Data
+datasets/mono/priors/news.de.2014-2017
+datasets/mono/priors/news.en.2014-2017
+datasets/mt/wmt_ende/
+datasets/mt/wmt_entr/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
