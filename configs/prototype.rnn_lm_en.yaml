@@ -11,7 +11,7 @@ logging:
   module_grad_interval: 500
 
 optim:
-  optimizer: ranger
+  optimizer: adam
   lr: 0.001
   k: 10
   weight_decay: 0.0

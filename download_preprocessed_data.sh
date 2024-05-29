@@ -30,7 +30,7 @@ wget -P $MONO_PATH http://data.statmt.org/cbaziotis/projects/lm-prior/mono/news.
 #------------------------------------------------------------------------------------------------------
 # Parallel data
 #------------------------------------------------------------------------------------------------------
-PARA_ENDE_PATH=datasets/parallel/wmt_ende/
+PARA_ENDE_PATH=datasets/mt/wmt_ende/
 wget -P $PARA_ENDE_PATH http://data.statmt.org/cbaziotis/projects/lm-prior/parallel/wmt_ende/de.16000.model
 wget -P $PARA_ENDE_PATH http://data.statmt.org/cbaziotis/projects/lm-prior/parallel/wmt_ende/de.16000.vocab
 wget -P $PARA_ENDE_PATH http://data.statmt.org/cbaziotis/projects/lm-prior/parallel/wmt_ende/dev.de
@@ -50,7 +50,7 @@ wget -P $PARA_ENDE_PATH http://data.statmt.org/cbaziotis/projects/lm-prior/paral
 wget -P $PARA_ENDE_PATH http://data.statmt.org/cbaziotis/projects/lm-prior/parallel/wmt_ende/truecase-model.de
 wget -P $PARA_ENDE_PATH http://data.statmt.org/cbaziotis/projects/lm-prior/parallel/wmt_ende/truecase-model.en
 
-PARA_ENTR_PATH=datasets/parallel/wmt_entr/
+PARA_ENTR_PATH=datasets/mt/wmt_entr/
 wget -P $PARA_ENTR_PATH http://data.statmt.org/cbaziotis/projects/lm-prior/parallel/wmt_entr/dev.en
 wget -P $PARA_ENTR_PATH http://data.statmt.org/cbaziotis/projects/lm-prior/parallel/wmt_entr/dev.en.pp
 wget -P $PARA_ENTR_PATH http://data.statmt.org/cbaziotis/projects/lm-prior/parallel/wmt_entr/dev.tr

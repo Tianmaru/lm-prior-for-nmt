@@ -4,7 +4,7 @@ from pathlib import Path
 import torch
 
 print("torch:", torch.__version__)
-print("Cuda:", torch.backends.cudnn.cuda)
+print("Cuda:", torch.version.cuda)
 print("CuDNN:", torch.backends.cudnn.version())
 # os.environ['CUDA_VISIBLE_DEVICES'] = "5"
 CACHING = False

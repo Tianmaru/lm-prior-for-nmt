@@ -11,27 +11,35 @@ conda activate lmprior
 pip install -r requirements.txt
 ````
 
-### Download Data
-
 ```shell
 # just download all preprocessed data
 bash download_preprocssed_data.sh
 ```
 
-**1. Parallel data**:
-You can download the preprocessed data, the truecase models and the pretrained sentencepiece models from this link:
-http://data.statmt.org/cbaziotis/projects/lm-prior/parallel.
-Put the `wmt_ende` and `wmt_entr` folders in the `datasets/mt/` directory.
+```shell
+# add the root directory to the PYTHONPATH
+# this tells python to look into this directory to resolve module paths
+export PYTHONPATH=${PWD}:${PYTHONPATH}
+# alternatively
+source init_path.sh
+```
 
-To prepare the data on your own:
- 1. run `datasets/mt/download_data.sh`
- 2. run `datasets/mt/preprocess_parallel.sh`
+```shell
+# start visdom server at default port 8097
+visdom
+# make sure to use the same port as specified in sys_config.py
+visdom -port 8096
+```
 
+```shell
+# train language model
+python sent_lm.py --config ../configs/transformer/prior.lm_news_en_trans.yaml  --device cuda  --name prior.lm_news_en_3M_trans
+```
 
-**2. Monolingual data**:
-You can download the preprocessed data from this link:
-http://data.statmt.org/cbaziotis/projects/lm-prior/mono and then put the files in
-the `datasets/mono/priors/` directory.
+```shell
+# train translation model with subsampling to speed up training
+python nmt_prior.py --config ../../configs/transformer/trans.deen_base.yaml data.subsample=10000 --name final.trans.deen_base_10000
+```
 
 # OLD README
 

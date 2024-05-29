@@ -1,8 +1,18 @@
+
+*.swp
+
 # Data
-datasets/mono/priors/news.de.2014-2017
-datasets/mono/priors/news.en.2014-2017
+datasets/mono/priors/news.*
+datasets/mono/priors/.cache*
+
+datasets/mono/prototype/.cache*
+datasets/mono/prototype/*.cache
+
 datasets/mt/wmt_ende/
 datasets/mt/wmt_entr/
+
+# experiments
+experiments/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

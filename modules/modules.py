@@ -125,7 +125,7 @@ class RNNEncoder(nn.Module):
             ticks = length_countdown(lengths_sorted).float() * self.Wt
             x = torch.cat([x, ticks.unsqueeze(-1)], -1)
 
-        packed = pack_padded_sequence(x, lengths_sorted, batch_first=True)
+        packed = pack_padded_sequence(x, lengths_sorted.cpu(), batch_first=True)
         out_packed, hidden = self.rnn(packed, hidden)
         out_unpacked, _ = pad_packed_sequence(out_packed,
                                               batch_first=True,
